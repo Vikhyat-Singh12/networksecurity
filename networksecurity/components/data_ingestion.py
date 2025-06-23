@@ -5,7 +5,7 @@ from networksecurity.logging.logger import logging
 # configutarion of the data Ingestion Config
 
 from networksecurity.entity.config_entity import DataIngestionConfig
-from networksecurity.entity.artifact_entity import DataIngestionArtifacts
+from networksecurity.entity.artifact_entity import DataIngestionArtifact
 
 import os
 import  sys
@@ -105,7 +105,7 @@ class DataIngestion:
             dataFrame = self.export_data_into_feature_store(dataFrame)
 
             self.split_data_as_train_test(dataFrame)
-            dataingestionartifacts = DataIngestionArtifacts(trained_file_path=self.data_ingestion_config.training_file_path,
+            dataingestionartifacts = DataIngestionArtifact(trained_file_path=self.data_ingestion_config.training_file_path,
                                                             test_file_path=self.data_ingestion_config.testing_file_path)
             
             return dataingestionartifacts
