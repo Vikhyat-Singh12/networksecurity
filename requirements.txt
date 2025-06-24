@@ -6,6 +6,10 @@ certifi
 pymongo[srv]==3.6
 scikit-learn
 pyyaml
+dagshub
+mlflow
+fastapi
+python-multipart
 
 
 # -e .
